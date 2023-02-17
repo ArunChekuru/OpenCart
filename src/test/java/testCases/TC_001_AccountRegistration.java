@@ -1,14 +1,12 @@
 package testCases;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import pageObjects.AccountRegistrationPage;
+import pageObjects.AccountRegister;
 import pageObjects.HomePage;
 import testBase.BaseClass;
 
-public class TC_001_AccountRegistration extends BaseClass{
+public class TC_001_AccountRegistration extends BaseClass
+{
 	
 	@Test(groups={"regression","master"})
 	public void test_accout_Registration()
@@ -17,45 +15,43 @@ public class TC_001_AccountRegistration extends BaseClass{
 		
 		try
 		{
-			driver.get(rb.getString("appURL"));
+			driver.get(rb.getString("appurl"));
 			logger.info("Home Page Displayed ");
-			
 			driver.manage().window().maximize();
-			
-			HomePage hp=new HomePage(driver);
-			hp.clickMyAccount();
+			HomePage hp = new HomePage(driver);
+			hp.clickmyaccount();
 			logger.info("Clicked on My Account ");
-			hp.clickRegister();
+			hp.clickregister();
 			logger.info("Clicked on Register ");
 			
-			AccountRegistrationPage regpage=new AccountRegistrationPage(driver);
-			regpage.setFirstName("John");
+			AccountRegister regpag =new AccountRegister(driver);
+			regpag.setfirstname("Gatala");
 			logger.info("Provided First Name ");
 			
-			regpage.setLastName("Canedy");
+			regpag.setlastname("Malyadri");
 			logger.info("Provided Last Name ");
 			
-			regpage.setEmail(randomestring()+"@gmail.com");
+			regpag.setemail(randomstring()+"@gmail.com");
 			logger.info("Provided Email ");
 			
-			regpage.setTelephone("65656565");
+			regpag.settelephone("7013421928");
 			logger.info("Provided Telephone ");
 			
-			regpage.setPassword("abcxyz");
+			regpag.setpassword("Mal@134");
 			logger.info("Provided Password ");
 			
-			regpage.setConfirmPassword("abcxyz");
-			logger.info("Provided Confrmed Password ");
+			regpag.setconfrmpassord("Mal@134");
+			logger.info("Provided Confirmed Password ");
 			
-			regpage.setPrivacyPolicy();
+			regpag.setprivacypolicy();
 			logger.info("Set Privacy Policy ");
 			
-			regpage.clickContinue();
+			regpag.setcontinue();
 			logger.info("Clicked on Continue ");
 			
-			String confmsg=regpage.getConfirmationMsg();
+			String conmsg=regpag.getConfirmationMsg();
 			
-			if(confmsg.equals("Your Account Has Been Created!"))
+			if(conmsg.equals("Your Account Has Been Created!"))
 			{
 				logger.info("Account Registration Success ");
 				Assert.assertTrue(true);
