@@ -1,0 +1,12 @@
+16:40:19.425 [main] INFO  testCases.TC_003_LoginDDT - Entered vaild password 
+16:40:19.937 [main] INFO  testCases.TC_003_LoginDDT - Clicked on Login
+16:40:30.003 [main] ERROR testCases.TC_003_LoginDDT - Login Failed 
+16:40:30.003 [main] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDDT 
+16:40:30.004 [main] INFO  testCases.TC_003_LoginDDT -  Starting TC_003_LoginDDT 
+16:40:30.533 [main] INFO  testCases.TC_003_LoginDDT - Clicked on My Account 
+16:40:31.782 [main] INFO  testCases.TC_003_LoginDDT - Clicked on Login 
+16:40:31.913 [main] INFO  testCases.TC_003_LoginDDT - Entered vaild email adress 
+16:40:32.020 [main] INFO  testCases.TC_003_LoginDDT - Entered vaild password 
+16:40:32.765 [main] INFO  testCases.TC_003_LoginDDT - Clicked on Login
+16:40:42.784 [main] ERROR testCases.TC_003_LoginDDT - Login Failed 
+16:40:42.784 [main] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDDT 
